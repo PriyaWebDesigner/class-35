@@ -62,27 +62,33 @@ echo multiply(50) . '<br>'; //50000
 
  echo divison(addition(100,100), 20) . '<br>'; //10
 
+ echo '<br>';
+
 ?>
 
 
 <?php
-// Find a given number is odd or even
+// Find a given number is odd or even using Array and for loop
+ //Example-6
 
 $number = [2,3,4,5,26,25,46,47];
 $element = sizeof($number);
 
-for($i=0; $i>$element; $i++){
+for($i=0; $i<$element; $i++){
     if($number[$i]%2==0){
-        echo $number[$i] . 'The Number is Even = ';
+        echo 'The Number is Even = ' . $number[$i] . '<br>' ;
     }
 
     else{
-        echo $number[$i] . 'The Number is Odd = ';
+        echo 'The Number is Odd = ' . $number[$i] . '<br>' ;
     }
 }
 
+echo '<br>';
+
 
 // Find a given number is odd or even using Function
+ //Example-7
 
 function oddEven($number){
 
@@ -97,8 +103,11 @@ function oddEven($number){
 }
 oddEven(23);
 
+echo '<br>';
+
 
 //Find a given number is Possitive or Negative using function
+ //Example-8
 
 function number($num){
     if($num>0){
@@ -111,8 +120,11 @@ function number($num){
 }
 number(-2);
 
+echo '<br>';
 
-//Find the grades of the marks using Array and Function
+
+//Find the grades of the marks using Array and Function and foreach loop
+ //Example-9
 
 function markSheet($marks){
     foreach($marks as $element){
@@ -145,7 +157,10 @@ function markSheet($marks){
 $studentMarks = [97,85,101,35,27,55,75,65];
 markSheet($studentMarks);
 
+echo '<br>';
+
 //Find the larger number from the given number
+ //Example-10
 
 function num($number1,$number2,$number3){
     
@@ -163,18 +178,20 @@ function num($number1,$number2,$number3){
 
 num(1,-3,4);
 
+echo '<br>';
 
-// Find Odd and Evan Number using Array and Function  
+// Find Odd and Evan Number using Array and Function and for loop  
+ //Example-11
 
 function odEv($num){
 $element = sizeof($num);   
 for($i=0; $i<$element; $i++){
-    if($array[$i]%2==0){
-        echo $array[$i] . 'The Number is Even = ';
+    if($num[$i]%2==0){
+        echo 'The Number is Even = ' . $num[$i] . '<br>';
     }
 
     else{
-        echo $array[$i] . 'The Number is Odd = ';
+        echo 'The Number is Odd = ' . $num[$i]  . '<br>';
     }
 }
 
@@ -183,6 +200,139 @@ for($i=0; $i<$element; $i++){
 $array = [2,3,4,5,26,25,46,47];
 
 odEv($array);
+
+echo '<br>';
+
+// Find Posstive and Negative Number using Array and Function and for loop
+ //Example-12 
+
+function pN($number){
+
+    $element = sizeof($number);
+    for($i=0; $i<$element; $i++){
+        if($number[$i]>0){
+            echo 'The Possitive Number is = ' . $number[$i] . '<br>';
+        }
+        else{
+            echo 'The Negative Number is = ' . $number[$i] . '<br>';
+        }
+    }
+}
+
+$array = [-1,-4, 5,];
+pN($array);
+
+echo '<br>';
+
+
+// Find Posstive and Negative Number using Array and Function and while loop
+ //Example-13
+
+function poNe($number){
+    $element = sizeof($number);
+    $i=0;
+    while($i<$element){
+       
+   if($number[$i]>0){
+            echo 'The Possitive Number is = '. $number[$i]. '<br>';
+        }
+        else{
+            echo 'The Negative Number is = '. $number[$i]. '<br>';
+        }
+    $i++;
+    }
+}
+
+$array = [4,5,-3];
+poNe($array);
+
+echo '<br>';
+
+
+// Find Odd and Evan Number using Array and Function and do while loop 
+ //Example-14
+
+function oE($num){
+    $element = sizeof($num);
+    $i=0;
+    do{
+        if($num[$i]%2==0){
+            echo 'The Even Number is = '. $num[$i]. '<br>';
+        }
+        else{
+            echo 'The Odd Number is = '. $num[$i]. '<br>';
+        }
+    $i++;
+    }
+
+    while($i<$element);
+}
+
+$array = [25,57,44,66,34,22];
+oE($array);
+
+echo '<br>';
+
+
+//Find the students pass or fail in the exam using do while loop
+ //Example-15
+
+$array = [50,30,28];
+$element = sizeof($array);
+
+$i=0;
+do{
+    if($array[$i]>=30){
+        echo 'The student is Pass with '. $array[$i]. ' number'. '<br>';
+    }
+    else{
+        echo 'The student is Fail with '. $array[$i]. ' number'. '<br>';
+    }
+
+    $i++;
+}
+while($i<$element);
+
+echo '<br>';
+
+
+// Write a PHP programme to check whether two numbers are Equal or not using Function
+ //Example-16
+
+function check($number1,$number2){
+
+    if($number1==$number2){
+        echo 'The Numbers are Equal';
+    }
+    else{
+        echo 'The Numbers are not Equal';
+    }
+}
+check(5678323,5486787);
+
+echo '<br>';
+
+
+//Find the students pass or fail in the exam using Array and for each loop
+ //Example-17
+
+$array = [70,30,20];
+
+foreach($array as $element){
+    if($element>30){
+        echo 'The Student is Pass in the Exam'. '<br>';
+    }
+    else{
+        echo 'The Student is Fail in the Exam'. '<br>';
+    }
+}
+
+
+
+
+
+
+
 
 
 
