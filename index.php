@@ -1,6 +1,5 @@
 
 <?php
-
 //Function
 //Eample-1
 function test(){
@@ -63,6 +62,15 @@ echo multiply(50) . '<br>'; //50000
  echo divison(addition(100,100), 20) . '<br>'; //10
 
  echo '<br>';
+
+  //Example-6
+  function mul($number1){
+    $result = divison(400,20);
+   return $result*$number1;
+  }
+  echo mul(100).'<br>';
+  $multiply1 = mul(100)*100;
+  echo $multiply1.'<br>';
 
 ?>
 
